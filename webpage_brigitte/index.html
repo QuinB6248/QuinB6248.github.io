@@ -1,0 +1,114 @@
+<!DOCTYPE html> 
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css?family=Sacramento" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Alice" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    
+    <body >
+
+        <div id="container" >
+               
+            <!--MIDDLE-BOX PICTURE-->
+            <div class="box-middle box-change1">
+                <div class="box-middle-top"></div> 
+                <div class="image-box image-box-middle">
+                    <div class="image image-1"></div>                            
+                    <figcaption class="name-caption">Brigitte Hennequin</figcaption>
+                </div>        
+            </div>            
+                    
+          
+          
+            <div class="row">
+                
+                <!--CIRCLE-BOX BIRD AND LEAVES-->
+                <div class="col-1-of-2 col-left col-top ">
+                    <div class="box box-change" >
+                        <div class="top-box-bird">
+                            <div>
+                                <div id="image-sprite-bird" onmouseover="animateScript()" onmouseout="stopAnimate()" ></div>                           
+                            </div>
+                        </div>
+                        <div class="text-box text-box-left">
+                            <img src="img/animations3b.png" alt="moving images" id="text-picture-left">
+                        </div>
+                        <div class="image-box image-box-pos">                                
+                            <video class="videosettings" loop autoplay muted>
+                                <source src="img/leaves_loop3 (1).mp4" type="video/mp4">               
+                                 Your browser does not support the video tag.
+                            </video>                                    
+                        </div>                                  
+                    </div>
+                </div> 
+                <!--CIRCLE-BOX CATS--> 
+                <div class="col-1-of-2 col-left ">
+                    <div class="box box-change "> 
+                        <div class="text-box text-box-right">
+                            <img src="img/pets_and_friends2b.png" alt="pets and friends" id="text-picture-right">
+                        </div>
+                        <div class="cat-box"></div>
+                        <div class="image-box image-box-pos">
+                            <img src="img/033.jpg" alt="cats" class="image-cats">                                       
+                        </div>                                          
+                    </div>
+                </div>       
+                                     
+            </div>
+            
+            
+            <div class="row">
+                <!--CIRCLE-BOX COFFEE AND BAGELS--> 
+                <div class="col-1-of-2 col-left" >
+                    <div class="box box-change"  >
+                        <div class="top-box-coffee">
+                            <ul>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                                <li></li>                         
+                            </ul>
+                        </div>
+                        <div class="text-box text-box-left">
+                            <img src="img/coffee_bagels3b.png" alt="coffee and bagels" id="text-picture-left">
+                        </div> 
+                        <div class="image-box image-box-pos">
+                            <div class="image image-coffee"></div>                               
+                        </div>                              
+                    </div>
+                </div>
+
+                <!--CIRCLE-BOX BEE PAPER AND PATTERNS-->
+                <div class="col-1-of-2 col-left ">      
+                    <div class="box box-change" onmousemove="move(event)" id="container-background" >                    
+                        <div  id="bee">
+                            <img src="img/bee6single.svg" >                                    
+                        </div> 
+                        <div class="text-box text-box-right">
+                            <img src="img/paper_and_patterns2b.png" alt="paper and patterns" id="text-picture-right">
+                        </div>                                              
+                        <div class="image-box image-box-pos">
+                            <div class="image image-bee-paper"></div>                                        
+                        </div>                                            
+                    </div>
+                </div>            
+            
+            </div>       
+                  
+        </div>      
+     
+     
+
+        <script src="js/script.js"></script>
+    </body>
+
+</html>

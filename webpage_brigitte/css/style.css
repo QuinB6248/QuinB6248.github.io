@@ -1,0 +1,401 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    box-sizing: border-box;
+    font-family: 'Sacramento', 'Helvetica', cursive; 
+    font-weight: 200;    
+    line-height: 1.7;
+    color: black; 
+    position: relative;
+   
+}
+ 
+#container {
+    position: absolute;
+    background-color:rgba(194, 208, 220, .2);
+    background-image: url(../img/pumpkinnew_web4.png);
+    background-size: 47rem; 
+    font-size: 2rem; 
+    top: 0rem;
+    width: 120rem;
+    left: 50%;
+    transform: translateX( -50%);    
+}
+
+/* ROWS AND COLUMNS*/
+.row {   
+    margin: 0rem auto; 
+    margin-top: 18rem;
+    max-width: 70rem;    
+}
+.row:last-child {
+    margin: 0rem auto;
+}
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.col-left {
+    float:left;
+}
+.col-1-of-2 {
+    width: calc((100% - 1rem) / 2); 
+    margin-bottom: 0.1rem; 
+}
+.col-top {
+    margin-top: 0rem;
+}
+.col-1-of-2:not(:last-child) {
+    margin-right: 1rem;
+}
+
+/* GENERAL SETTINGS CIRCLE-BOXES*/
+
+.box {    
+    position: relative;
+    width: 30rem;
+    height: 30rem;
+    margin: 0rem auto;
+    margin-bottom: 15rem;
+}
+
+.image-box {
+    margin: 0rem auto;    
+    width: 20rem;
+    height: 20rem;
+    -webkit-clip-path: circle(50% at 50% 50%);
+    clip-path: circle(50% at 50% 50%);  
+}  
+.image-box-pos {
+    transform: translateY(5rem);
+} 
+.image {
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.text-box {
+    background-image: url(../img/background_boxes_wit.png);
+    background-position: center;
+    background-size: cover;
+    z-index: -5;
+    position: absolute; 
+    width: 170%;
+    height: 30rem;
+}
+.text-box-right {
+    transform: translate(0rem, 0rem);   
+}
+.text-box-left {
+    transform: translate(-23rem, 0rem);
+}
+#text-picture-right {
+    width: 58%;
+    transform: translate(23rem, 3.5rem) scale(1);
+}
+#text-picture-left {
+    width: 58%;
+    transform: translate(0rem, 3.5rem) scale(1);
+}
+
+
+/* MIDDLE CIRCLE-BOX MY-PICTURE*/
+.box-middle {    
+    position: absolute; 
+    background-image: url(../img/cloud_circle2.png);
+    background-position: 4rem 23rem;
+    background-size: 20rem;
+    background-repeat: no-repeat;
+    top: 0rem;
+    left: 0;
+    right: 0;
+    margin-top: 0rem;
+    margin-left: auto;
+    margin-right: auto;    
+    height: 50rem;
+    width: 20rem; 
+    z-index: 2;    
+}
+.box-middle-top {    
+    position: absolute;
+    transform: translate(-9rem, 3rem);
+    background-image: url(../img/thinkcloud3.png);
+    background-position: center 0rem;
+    background-size: 35rem;
+    background-repeat: no-repeat;
+    height: 20rem;
+    width: 38rem; 
+    z-index: 2;    
+}
+
+.image-box-middle {
+    transform: translateY(45.5rem);    
+}  
+.image-1 {
+    transform: translate(-4rem, 0rem) scale(1.4);
+    background-image: url(../img/my_photo2.jpg);
+    transition: all 1s ease;
+    filter:  brightness(90%);
+    -webkit-filter:  brightness(90%);
+}
+.image-box:hover .image-1 {   
+    transform: translate(-2rem, 0rem) scale(1.2);
+    -webkit-transform: translate(-2rem, 0rem) scale(1.2);
+    filter: blur(5px) brightness(70%);
+    -webkit-filter: blur(5px) brightness(70%);
+}
+.name-caption {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -20%);
+    color: white;
+    font-size: 3rem;
+    text-align: center;
+    opacity: 0;
+    transition: all .5s;
+    backface-visibility: hidden;
+}
+.image-box-middle:hover .name-caption {
+    opacity: 1;
+    transform: translate(-50%, -50%);  
+    -webkit-transform: translate(-50%, -50%);  
+}
+
+/* CIRCLE-BOX CATS*/
+.cat-box { 
+    position: absolute;
+    width: 30rem;
+    height: 30rem;   
+    background-image:none;
+    background-position: center -11rem;
+    background-size: 47rem;
+}
+.box:hover .cat-box {     
+    background-image:url(../img/cat_ears2.png);    
+}
+.image-cats {
+    width: 150%;
+    transform: translate(-5rem, -2.5rem) scale(1);
+}
+
+/* CIRCLE-BOX BIRD AND LEAVES*/
+.top-box-bird {
+    transform: translate(-6rem, -12rem);
+    z-index: 10;
+    position: absolute;    
+}
+#image-sprite-bird {    
+    height: 256px;
+    width: 256px;
+    /*background: url("../img/grid_vierkant_vogel_new.png") -512px 0px;*/
+    background: url("../img/long_sprite_vogel_new.png") -512px 0px;
+    transition: ease-in-out;
+    transform: scale(0.65);
+}
+.videosettings {
+    width: 180%;
+    transform: translate(0rem, 0rem);
+}
+
+/* CIRCLE-BOX COFFEE AND BAGELS*/
+
+.top-box-coffee {
+    transform: translate(0rem, 5rem);
+    z-index: 10;
+    position: absolute;
+    width: 30rem;
+    height: 1rem;
+}
+.image-coffee { 
+    transform: translate(-6rem, -2rem) scale(2);
+    background-image: url(../img/coffeebag.jpg);
+    transition: all 0.6s;
+}
+.image-box:hover .image-coffee {   
+    transform: translate(-6rem, -2rem) scale(2);
+    background-image: url(../img/coffeebag2.jpg);
+}
+/* animated steam */
+ul {
+    position: absolute;
+    top: 3rem;
+    left: 13rem;    
+    opacity: 0;
+    transition: all 0.6s ease;
+}
+li {
+    position: absolute;
+    list-style: none;
+    opacity: 0;
+    background: url(../img/steam_coffee7.svg);
+    background-repeat: no-repeat;
+    width: 50px;
+    height: 50px;
+}
+#image_smoke {
+    width: 40px;
+    height: 50px;
+    backface-visibility: hidden;
+} 
+li:nth-child(even) {
+    animation: animateEven 3.1s linear infinite;
+    -webkit-animation: animateEven 3.1s linear infinite;
+    animation-play-state: paused;   
+    -webkit-animation-play-state: paused;   
+}
+li:nth-child(odd) {
+    animation: animateOdd 3.1s linear infinite; 
+    -webkit-animation: animateOdd 3.1s linear infinite; 
+    animation-play-state: paused;
+    -webkit-animation-play-state: paused;
+}
+.box:hover li  {
+    animation-play-state: running;
+    -webkit-animation-play-state: running;
+    backface-visibility: hidden;
+}
+.box:hover ul {
+    opacity: 1;
+}
+@keyframes animateEven {
+    0% {
+        transform: translate(0,0) scale(1);
+        filter: blur(5px);
+        
+    }
+    20% {
+        opacity: .8;
+    }
+    100% {
+        transform: translate(20px,-300px) scale(1.5);
+        opacity: 0.1;
+        filter: blur(15px);
+        
+    }
+}
+
+@keyframes animateOdd {
+    0% {
+        transform: translate(0,0) scale(1);
+        filter: blur(5px);
+    }
+    20% {
+        opacity: .8;
+    }
+    100% {
+        transform: translate(-20px,-300px) scale(1.5);
+        opacity: 0.1;
+        filter: blur(15px);    
+    }
+}
+
+li:nth-child(1){ animation-delay: 0s;}
+li:nth-child(2){ animation-delay: .4s;}
+li:nth-child(3){ animation-delay: .8s;}
+li:nth-child(4){ animation-delay: 1.2s;}
+li:nth-child(5){ animation-delay: 1.6s;}
+li:nth-child(6){ animation-delay: 2s;}
+li:nth-child(7){ animation-delay: 2.4s;}
+li:nth-child(8){ animation-delay: 2.8s;}
+
+
+/* CIRCLE-BOX BEE PAPER AND PATTERNS*/
+.image-bee-paper {
+    width: 150%;
+    background-image: url(../img/testbij3.jpg);
+    background-position:-60px 0px; 
+    background-size: 100%;
+}
+
+#bee {
+      left: inherit;
+      top: inherit;
+      height: 50px;
+      width: 50px;
+      z-index: 10;
+      position: absolute;      
+}
+.left {    
+    transform: scaleX(1);
+    filter: FlipH; 
+    backface-visibility: hidden;   
+}
+.right {   
+    transform: scaleX(-1);
+    filter: FlipH; 
+    backface-visibility: hidden; 
+}
+
+/* MEDIA */
+@media screen and (max-width: 1200px) {
+    #container {
+        top: 0rem;
+        width: 45rem;
+    }
+    .col-1-of-2 {
+      width: 100%;   
+    }
+    .row {
+        margin: 0rem auto;
+        max-width: 60rem; 
+    }
+    .row:last-child {
+        margin: 0rem auto;
+    }
+    .col-top {
+        margin-top: 58rem;
+    }
+    .box-middle {   
+        background-image: none;
+        height: 2rem;
+    }
+    .image-box-middle {
+        transform: translateY(23rem);    
+    } 
+    .box-middle-top {    
+        transform: translate(-7rem, 6rem);       
+    } 
+    .box-change {
+        transform: translateX(0rem);
+    }
+    .text-box { 
+        width: 100%;
+        height: 20rem;  
+    }
+    .text-box-right {
+        transform: translate(0rem, 24rem);   
+    }
+    .text-box-left {
+        transform: translate(0rem, 24rem);
+    }
+    #text-picture-right {
+        width: 80%;
+        transform: translate(2rem, 0rem) scale(1);
+    }
+    #text-picture-left {
+        width: 80%;
+        transform: translate(2rem, 0rem) scale(1);
+    }
+    .middle-block {    
+        background-size: 30rem 5rem;  
+        width: 30rem;
+        height: 5rem;   
+        margin-top: 34rem;     
+    }
+}
+
+
